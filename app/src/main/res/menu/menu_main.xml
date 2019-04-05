@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="br.com.grupoprojetar.minhagrana.MainActivity">
+
+    <item
+        android:id="@+id/perfil"
+        android:orderInCategory="100"
+        android:title="@string/perfil"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/exit"
+        android:orderInCategory="200"
+        android:title="@string/logout"
+        app:showAsAction="never" />
+</menu>

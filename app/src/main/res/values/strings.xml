@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Minha Grana</string>
+    <string name="action_settings">Settings</string>
+
+    //Strings da Tela de Cadastro
+    <string name="nome">Name</string>
+    <string name="senha">Password</string>
+    <string name="email">Email</string>
+    <string name="criar">Create an account</string>
+    <string name="limpar">Clear</string>
+
+    //Strings da Tela de Login
+    <string name="entrar">Enter</string>
+    <string name="salvar">Save</string>
+
+    //Strings da Tela Home
+    <string name="credito_home">Credits</string>
+    <string name="debito_home">Debits</string>
+    <string name="saldo_home">Balance</string>
+    <string name="moeda">R$</string>
+
+    //Strings geral
+    <string name="erro">Error</string>
+    <string name="ok">OK</string>
+    <string name="entrada">Welcome!</string>
+    <string name="create_sucess">Successful account creation! :D</string>
+    <string name="create_fail">Error creating account! :(</string>
+    <string name="settings">Settings</string>
+    <string name="logout">Exit</string>
+    <string name="reset">Reset Password</string>
+    <string name="voltar">Back</string>
+    <string name="perfil">Profile</string>
+    <string name="id">ID</string>
+
+    //TMP
+    <string name="v1" translatable="false">4000</string>
+    <string name="v2" translatable="false">2600</string>
+    <string name="r1" translatable="false">1400</string>
+</resources>

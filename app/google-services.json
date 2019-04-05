@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "240579248960",
+    "firebase_url": "https://minhagrana-a54a8.firebaseio.com",
+    "project_id": "minhagrana-a54a8",
+    "storage_bucket": "minhagrana-a54a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240579248960:android:0137891ec5128baf",
+        "android_client_info": {
+          "package_name": "br.com.grupoprojetar.minhagrana"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "240579248960-64emqjuthf3nf185qn07tgibvs4pdl8s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.grupoprojetar.minhagrana",
+            "certificate_hash": "ce9f793e466a6c1d1059757ee753ec5b562fcbd4"
+          }
+        },
+        {
+          "client_id": "240579248960-ceg470esqb2r8ufvhlbsg4mktse3sugb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZNS7Kk2AbltYV6F7eDGNM4it3_SvfkVY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "240579248960-ceg470esqb2r8ufvhlbsg4mktse3sugb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
