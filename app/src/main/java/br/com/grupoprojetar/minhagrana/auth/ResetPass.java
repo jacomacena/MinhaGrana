@@ -1,17 +1,11 @@
 package br.com.grupoprojetar.minhagrana.auth;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-
 import br.com.grupoprojetar.minhagrana.R;
 
 public class ResetPass extends AppCompatActivity {
@@ -32,26 +26,20 @@ public class ResetPass extends AppCompatActivity {
     }
 
     private void acaoClick() {
-        btnResetPass.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String email = edtEmail.getText().toString().trim();
-                resetSenha(email);
-            }
+        btnResetPass.setOnClickListener(v -> {
+            String email = edtEmail.getText().toString().trim();
+            resetSenha(email);
         });
     }
 
     private void resetSenha(String email) {
         mAuth.sendPasswordResetEmail(email)
-                .addOnCompleteListener(ResetPass.this, new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()){
-                            logs("Email de reset de senha enviado!");
-                            finish();
-                        }else {
-                            logs("Email n�o encontrado! :(");
-                        }
+                .addOnCompleteListener(ResetPass.this, task -> {
+                    if (task.isSuccessful()){
+                        logs("Email de reset de senha enviado!");
+                        finish();
+                    }else {
+                        logs("Email n�o encontrado! :(");
                     }
                 });
     }
