@@ -2,7 +2,6 @@ package br.com.grupoprojetar.minhagrana.auth;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Exclude;
-
 import java.util.Map;
 
 public class User {
@@ -12,23 +11,23 @@ public class User {
     private String email;
     private String password;
 
-    public User() {
+    private User() {
     }
     //GET/SET ID
-    public String getId() {
+    private String getId() {
         return id;
     }
 
-    public void setId(String id) {
+    private void setId(String id) {
         this.id = id;
     }
 
     //GET/SET NOME
-    public String getName() {
+    private String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    private void setName(String name) {
         this.name = name;
     }
 
@@ -38,18 +37,18 @@ public class User {
         }
     }
 
-    public void setNameIfNull(String name) {
+    private void setNameIfNull(String name) {
         if (this.name == null) {
             this.name = name;
         }
     }
 
     //GET/SET EMAIL
-    public String getEmail() {
+    private String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    private void setEmail(String email) {
         this.email = email;
     }
 
@@ -59,7 +58,7 @@ public class User {
         }
     }
 
-    public void setEmailIfNull(String email) {
+    private void setEmailIfNull(String email) {
         if (this.email == null) {
             this.email = email;
         }
@@ -67,16 +66,16 @@ public class User {
 
     //GET/SET SENHA
     @Exclude
-    public String getPassword() {
+    private String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
+    private void setPassword(String password) {
         this.password = password;
     }
 
 
-    public void saveDB(DatabaseReference.CompletionListener... completionListener) {
+    private void saveDB(DatabaseReference.CompletionListener... completionListener) {
         DatabaseReference firebase = LibraryClass.getFirebase().child("users").child(getId());
 
         if (completionListener.length == 0) {
