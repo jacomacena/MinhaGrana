@@ -14,7 +14,7 @@ public class Conexao {
     private Conexao() {
     }
 
-    //inicializacao inicial do login do firebase
+    //inicializacao do login do firebase
     public static FirebaseAuth getFirebaseAuth(){
         if (firebaseAuth == null){
             inicializaFirebaseAuth();
