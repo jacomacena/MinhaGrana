@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 
 import br.com.grupoprojetar.minhagrana.auth.Conexao;
@@ -19,8 +18,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
     }
 
     @Override
@@ -42,21 +39,15 @@ public class MainActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.perfil) {
             Button btPerfil = findViewById(R.id.exit);
-            btPerfil.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent a = new Intent(MainActivity.this, Perfil.class);
-                    startActivity(a);
-                }
+            btPerfil.setOnClickListener(v -> {
+                Intent a = new Intent(MainActivity.this, Perfil.class);
+                startActivity(a);
             });
         }else if (id == R.id.exit){
             Button btexit = findViewById(R.id.exit);
-            btexit.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Conexao.logOut();
-                    finish();
-                }
+            btexit.setOnClickListener(v -> {
+                Conexao.logOut();
+                finish();
             });
         }
 
