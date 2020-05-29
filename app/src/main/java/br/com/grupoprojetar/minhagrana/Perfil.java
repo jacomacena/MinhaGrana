@@ -16,7 +16,6 @@ public class Perfil extends AppCompatActivity {
     private TextView txtEmail, txtID;
     private Button btnExit;
 
-    private FirebaseAuth mAuth;
     FirebaseUser user;
 
     @Override
@@ -31,12 +30,9 @@ public class Perfil extends AppCompatActivity {
     }
 
     private void acaoClick() {
-        btnExit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Conexao.logOut();
-                finish();
-            }
+        btnExit.setOnClickListener(v -> {
+            Conexao.logOut();
+            finish();
         });
     }
 
@@ -49,7 +45,7 @@ public class Perfil extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-        mAuth = Conexao.getFirebaseAuth();
+        FirebaseAuth mAuth = Conexao.getFirebaseAuth();
         user = Conexao.getFirebaseUser();
 
         validaUser();
