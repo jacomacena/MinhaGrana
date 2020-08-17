@@ -2,11 +2,12 @@ package br.com.grupoprojetar.minhagrana;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import br.com.grupoprojetar.minhagrana.auth.Conexao;
 
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent a = new Intent(MainActivity.this, Perfil.class);
                 startActivity(a);
             });
-        }else if (id == R.id.exit){
+        } else if (id == R.id.exit) {
             Button btexit = findViewById(R.id.exit);
             btexit.setOnClickListener(v -> {
                 Conexao.logOut();

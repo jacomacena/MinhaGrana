@@ -12,8 +12,8 @@ public class Conexao {
     }
 
     //inicializacao do login do firebase
-    public static FirebaseAuth getFirebaseAuth(){
-        if (firebaseAuth == null){
+    public static FirebaseAuth getFirebaseAuth() {
+        if (firebaseAuth == null) {
             inicializaFirebaseAuth();
         }
         return firebaseAuth;
@@ -33,12 +33,12 @@ public class Conexao {
     }
 
     // fornece o usuario que esta logado
-    public static FirebaseUser getFirebaseUser(){
+    public static FirebaseUser getFirebaseUser() {
         return firebaseUser;
     }
 
     // saida do usuario (logout)
-    public static void logOut(){
+    public static void logOut() {
         firebaseAuth.signOut();
     }
 }

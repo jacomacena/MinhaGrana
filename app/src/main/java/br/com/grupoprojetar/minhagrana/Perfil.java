@@ -1,10 +1,10 @@
 package br.com.grupoprojetar.minhagrana;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -52,9 +52,9 @@ public class Perfil extends AppCompatActivity {
     }
 
     private void validaUser() {
-        if (user == null){
+        if (user == null) {
             finish();
-        }else{
+        } else {
             txtEmail.setText(user.getEmail());
             txtID.setText(user.getUid());
         }

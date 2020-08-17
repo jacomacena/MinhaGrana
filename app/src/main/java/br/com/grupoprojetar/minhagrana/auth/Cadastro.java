@@ -2,11 +2,14 @@ package br.com.grupoprojetar.minhagrana.auth;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.auth.FirebaseAuth;
+
 import br.com.grupoprojetar.minhagrana.Login;
 import br.com.grupoprojetar.minhagrana.MainActivity;
 import br.com.grupoprojetar.minhagrana.R;
@@ -37,7 +40,7 @@ public class Cadastro extends AppCompatActivity {
             String email = emailReg.getText().toString().trim();
             String senha = passReg.getText().toString().trim();
 
-            criarUser(email,senha);
+            criarUser(email, senha);
         });
 
         //VOLTAR
@@ -48,21 +51,21 @@ public class Cadastro extends AppCompatActivity {
     }
 
     private void criarUser(String email, String senha) {
-        mAuth.createUserWithEmailAndPassword(email,senha)
+        mAuth.createUserWithEmailAndPassword(email, senha)
                 .addOnCompleteListener(Cadastro.this, task -> {
-                    if (task.isSuccessful()){
+                    if (task.isSuccessful()) {
                         logs("Usuario criado com sucesso! :D");
                         Intent a = new Intent(Cadastro.this, MainActivity.class);
                         startActivity(a);
                         finish();
-                    }else{
+                    } else {
                         logs("Erro ao cadastrar");
                     }
                 });
     }
 
-    private void logs(String msg){
-        Toast.makeText(Cadastro.this,msg,Toast.LENGTH_LONG).show();
+    private void logs(String msg) {
+        Toast.makeText(Cadastro.this, msg, Toast.LENGTH_LONG).show();
     }
 
     //inicializacao de toda a estrutura da tela (cadastro.xml)

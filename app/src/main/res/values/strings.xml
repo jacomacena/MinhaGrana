@@ -36,4 +36,13 @@
     <string name="v1" translatable="false">4000</string>
     <string name="v2" translatable="false">2600</string>
     <string name="r1" translatable="false">1400</string>
+    <string name="title_activity_credits">Credits</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

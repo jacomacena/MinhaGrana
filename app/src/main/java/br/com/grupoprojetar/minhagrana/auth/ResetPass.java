@@ -1,11 +1,14 @@
 package br.com.grupoprojetar.minhagrana.auth;
 
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.auth.FirebaseAuth;
+
 import br.com.grupoprojetar.minhagrana.R;
 
 public class ResetPass extends AppCompatActivity {
@@ -35,17 +38,17 @@ public class ResetPass extends AppCompatActivity {
     private void resetSenha(String email) {
         mAuth.sendPasswordResetEmail(email)
                 .addOnCompleteListener(ResetPass.this, task -> {
-                    if (task.isSuccessful()){
+                    if (task.isSuccessful()) {
                         logs("Email de reset de senha enviado!");
                         finish();
-                    }else {
+                    } else {
                         logs("Email n�o encontrado! :(");
                     }
                 });
     }
 
     private void logs(String s) {
-        Toast.makeText(this,s,Toast.LENGTH_LONG).show();
+        Toast.makeText(this, s, Toast.LENGTH_LONG).show();
     }
 
     private void iniciarViews() {

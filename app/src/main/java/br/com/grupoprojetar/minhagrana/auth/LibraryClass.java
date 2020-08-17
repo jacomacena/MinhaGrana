@@ -6,13 +6,14 @@ import com.google.firebase.database.FirebaseDatabase;
 final class LibraryClass {
     private static DatabaseReference firebase;
 
-    private LibraryClass(){}
+    private LibraryClass() {
+    }
 
-    static DatabaseReference getFirebase(){
-        if( firebase == null ){
+    static DatabaseReference getFirebase() {
+        if (firebase == null) {
             firebase = FirebaseDatabase.getInstance().getReference();
         }
 
-        return( firebase );
+        return (firebase);
     }
 }

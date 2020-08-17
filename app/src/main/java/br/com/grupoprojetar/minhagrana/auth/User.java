@@ -2,6 +2,7 @@ package br.com.grupoprojetar.minhagrana.auth;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Exclude;
+
 import java.util.Map;
 
 public class User {
@@ -13,6 +14,7 @@ public class User {
 
     private User() {
     }
+
     //GET/SET ID
     private String getId() {
         return id;

@@ -2,12 +2,15 @@ package br.com.grupoprojetar.minhagrana;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.auth.FirebaseAuth;
+
 import br.com.grupoprojetar.minhagrana.auth.Cadastro;
 import br.com.grupoprojetar.minhagrana.auth.Conexao;
 import br.com.grupoprojetar.minhagrana.auth.ResetPass;
@@ -39,7 +42,7 @@ public class Login extends AppCompatActivity {
             String email = editEmail.getText().toString().trim();
             String senha = editSenha.getText().toString().trim();
 
-            login(email,senha);
+            login(email, senha);
         });
 
         //CADASTRO
@@ -57,19 +60,19 @@ public class Login extends AppCompatActivity {
     }
 
     private void login(String email, String senha) {
-        mAuth.signInWithEmailAndPassword(email,senha)
+        mAuth.signInWithEmailAndPassword(email, senha)
                 .addOnCompleteListener(Login.this, task -> {
-                    if (task.isSuccessful()){
+                    if (task.isSuccessful()) {
                         Intent a = new Intent(Login.this, MainActivity.class);
                         startActivity(a);
-                    }else {
+                    } else {
                         logs();
                     }
                 });
     }
 
     private void logs() {
-        Toast.makeText(Login.this, "Email e/ou Senha incorretos! :(",Toast.LENGTH_LONG).show();
+        Toast.makeText(Login.this, "Email e/ou Senha incorretos! :(", Toast.LENGTH_LONG).show();
     }
 
     //inicializacao de toda a estrutura da tela (login.xml)

@@ -1,24 +1,25 @@
 package br.com.grupoprojetar.minhagrana;
 
 import android.content.Intent;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Splash extends AppCompatActivity {
 
-    private int SPLASH_TIME=3000;
+    private int SPLASH_TIME = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        Thread timer = new Thread(){
+        Thread timer = new Thread() {
             @Override
-            public void run(){
-                try{
+            public void run() {
+                try {
                     sleep(SPLASH_TIME);
-                }catch (InterruptedException e){
+                } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
 
